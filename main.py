@@ -1,6 +1,20 @@
 import numpy as np
 print("\nWelcome to HALIA")
 
+def dark_matter_halos():
+  print("\nAll About Dark Matter Halos and Helia\n")
+  print("What Are Dark Matter Halos\n")
+  print("Dark matter halos are large invisible clouds made mostly of dark matter. They surround galaxies and hold them together with gravity. The center of a halo is the densest part, and the outer region is much thinner. Even though we cannot see dark matter, its gravity shows that most of a galaxy's mass lies inside this hidden halo.\n")
+  print("Why They Exist\n")
+  print("\nAfter the Big Bang, the universe was full of small uneven spots in matter. Over time, gravity pulled dark matter together around those spots. These clumps became halos. Normal matter followed the dark matter and formed stars and galaxies inside those halos. Without dark matter halos, galaxies would not exist at all. They are the base on which every galaxy is built.\n")
+  print("Who Defined Them and How\n")
+  print("""The idea of dark matter halos started with Fritz Zwicky in the 1930s. He saw that galaxies in the Coma Cluster moved too fast to be held by the visible mass and said there must be "dark matter."
+In the 1970s, Vera Rubin and Kent Ford studied the motion of stars in galaxies and found the same problem. The outer stars were moving too fast, which meant there was invisible mass around each galaxy - the halo.
+Later in the 1990s, Julio Navarro, Carlos Frenk, and Simon White used computer simulations to show how halos form and what shape they have. Their model is now called the NFW profile, and it describes how the density of dark matter changes from the center outward.
+""")
+  print("Why We Created Helia\n")
+  print("Helia is made to explore this hidden side of the universe. It shows how halos hold galaxies together and how the mass spreads from the center to the edge. It helps people see what dark matter does instead of just reading about it. Helia connects theory and imagination, letting users understand the structure that keeps the universe in balance.")
+
 def density_profile():
   print("\nA dark matter halo is very dense in the center and gets thinner as you move outwards. We use a common formula called the NFW profile to describe this. In our program, we pick points at different distances from the center and calculate the density at each point to see how the mass is spread in the halo.\n")
   try:
@@ -56,7 +70,7 @@ def virial_radius_mass_data():
 
 # --- Velocity Dispersion ---
 def velocity_dispersion_data():
-  print("\nVelocity dispersion tells us how fast particles are moving randomly inside the dark matter halo. It's a measure of the spread in their velocities — some particles move slower, others faster, depending on how strong gravity is in that region.\n")
+  print("\nVelocity dispersion tells us how fast particles are moving randomly inside the dark matter halo. It's a measure of the spread in their velocities, some particles move slower, others faster, depending on how strong gravity is in that region.\n")
   G = 4.302e-6  # Gravitational constant in (kpc * km^2) / (Msun * s^2)
   
   try:
@@ -79,29 +93,32 @@ def menu():
   while True:
     print("\nLet the learning being\n")
     print("\nChoose an operation to perform on the Dark Matter Halo:")
-    print("1. Density Profile")
-    print("2. Virial Radius and Virial Mass")
-    print("3. Velocity Dispersion")
-    print("4. Exit")
+    print("1. All About Dark Matter Halos and Helia")
+    print("2. Density Profile")
+    print("3. Virial Radius and Virial Mass")
+    print("4. Velocity Dispersion")
+    print("5. Exit")
     try:
-      choice = int(input("Enter a number (1-4): "))
+      choice = int(input("Enter a number (1-5): "))
     except ValueError:
-      print("Invalid input. Please enter a number between 1 and 4.")
+      print("Invalid input. Please enter a number between 1 and 5.")
       continue
     
     if choice == 1:
+      dark_matter_halos()
+    elif choice == 2:
       r, rho = density_profile()
       if r is not None and rho is not None:
         print("Density profile computed. Arrays r and rho available for further analysis.")
-    elif choice == 2:
+    elif choice == 3:
       virial_mass, virial_radius = virial_radius_mass_data()
       if virial_mass is not None and virial_radius is not None:
         print("Virial radius and mass computed successfully.")
-    elif choice == 3:
+    elif choice == 4:
       sigma_v = velocity_dispersion_data()
       if sigma_v is not None:
         print("Velocity dispersion computed successfully.")
-    elif choice == 4:
+    elif choice == 5:
       print("Exiting program. Goodbye!")
       break
     else:
