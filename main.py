@@ -54,6 +54,27 @@ def virial_radius_mass_data():
   
   return M_vir, R_vir
 
+# --- Velocity Dispersion ---
+def velocity_dispersion_data():
+  print("\nVelocity dispersion tells us how fast particles are moving randomly inside the dark matter halo. It's a measure of the spread in their velocities — some particles move slower, others faster, depending on how strong gravity is in that region.\n")
+  G = 4.302e-6  # Gravitational constant in (kpc * km^2) / (Msun * s^2)
+  
+  try:
+    M_vir = float(input("Enter the Virial Mass (in solar masses): "))
+    R_vir = float(input("Enter the Virial Radius (in kiloparsecs): "))
+    
+    if M_vir <= 0 or R_vir <= 0:
+      print("Values must be positive.")
+      return None
+  except ValueError:
+    print("Invalid input. Please enter numbers only.")
+    return None
+
+  sigma_v = np.sqrt(G * M_vir / (2 * R_vir))
+  print(f"\nEstimated Velocity Dispersion: {sigma_v:.3f} km/s")
+  
+  return sigma_v
+
 def menu():
   while True:
     print("\nLet the learning being\n")
@@ -76,6 +97,10 @@ def menu():
       virial_mass, virial_radius = virial_radius_mass_data()
       if virial_mass is not None and virial_radius is not None:
         print("Virial radius and mass computed successfully.")
+    elif choice == 3:
+      sigma_v = velocity_dispersion_data()
+      if sigma_v is not None:
+        print("Velocity dispersion computed successfully.")
     elif choice == 4:
       print("Exiting program. Goodbye!")
       break
