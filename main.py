@@ -12,7 +12,7 @@ def dark_matter_halos():
 In the 1970s, Vera Rubin and Kent Ford studied the motion of stars in galaxies and found the same problem. The outer stars were moving too fast, which meant there was invisible mass around each galaxy - the halo.
 Later in the 1990s, Julio Navarro, Carlos Frenk, and Simon White used computer simulations to show how halos form and what shape they have. Their model is now called the NFW profile, and it describes how the density of dark matter changes from the center outward.
 """)
-  print("Why We Created Helia\n")
+  print("Why We Created HALIA\n")
   print("Helia is made to explore this hidden side of the universe. It shows how halos hold galaxies together and how the mass spreads from the center to the edge. It helps people see what dark matter does instead of just reading about it. Helia connects theory and imagination, letting users understand the structure that keeps the universe in balance.")
 
 def density_profile():
