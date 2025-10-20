@@ -1,6 +1,8 @@
 import numpy as np
 print("\nWelcome to HALIA")
 
+#All About Dark Matter Halos and Helia
+
 def dark_matter_halos():
   print("\nAll About Dark Matter Halos and Helia\n")
   print("What Are Dark Matter Halos\n")
@@ -14,6 +16,8 @@ Later in the 1990s, Julio Navarro, Carlos Frenk, and Simon White used computer s
 """)
   print("Why We Created HALIA\n")
   print("Helia is made to explore this hidden side of the universe. It shows how halos hold galaxies together and how the mass spreads from the center to the edge. It helps people see what dark matter does instead of just reading about it. Helia connects theory and imagination, letting users understand the structure that keeps the universe in balance.")
+
+#Density Profile
 
 def density_profile():
   print("\nA dark matter halo is very dense in the center and gets thinner as you move outwards. We use a common formula called the NFW profile to describe this. In our program, we pick points at different distances from the center and calculate the density at each point to see how the mass is spread in the halo.\n")
@@ -89,6 +93,50 @@ def velocity_dispersion_data():
   
   return sigma_v
 
+# --- Extra Dimension Potential Simulation ---
+def extra_dimension_potential():
+  print("\n--- Extra Dimension Potential Simulation ---")
+  print("This feature simulates how dark matter halos would behave if gravity had access to extra dimensions.\n")
+  try:
+    r_input = float(input("Enter radius (r) for Extra Dimension simulation: "))
+    if r_input <= 0:
+      print("Radius must be positive.")
+      return None
+  except ValueError:
+    print("Invalid input. Please enter a number.")
+    return None
+
+  # Placeholder values for demonstration
+  rho_std = 1.0 / ((r_input / 1.0) * (1 + r_input / 1.0)**2)
+  rho_extra = rho_std * 1.2  # Slightly higher in extra dimensions
+  
+  m_std = 10.0
+  m_extra = m_std * 1.15
+  
+  r_vir_std = 5.0
+  r_vir_extra = r_vir_std * 0.95
+  
+  v_std = 100.0
+  v_extra = v_std * 1.1
+
+  # Print results
+  print(f"\nDensity at r = {r_input}: Standard = {rho_std:.3f}, Extra Dimension = {rho_extra:.3f}")
+  if rho_extra > rho_std:
+    print("Explanation: Density increases slightly because gravity is stronger in extra dimensions at small scales.")
+  else:
+    print("Explanation: Density decreases slightly because gravity is weaker in extra dimensions at this scale.")
+
+  print(f"\nVirial Mass: Standard = {m_std:.2f}, Extra Dimension = {m_extra:.2f}")
+  print("Explanation: Mass increases because stronger gravity binds more matter within the halo.")
+
+  print(f"\nVirial Radius: Standard = {r_vir_std:.2f}, Extra Dimension = {r_vir_extra:.2f}")
+  print("Explanation: Radius decreases slightly because stronger binding pulls particles inward.")
+
+  print(f"\nVelocity Dispersion: Standard = {v_std:.2f} km/s, Extra Dimension = {v_extra:.2f} km/s")
+  print("Explanation: Particles move faster because stronger gravity increases kinetic energy.")
+  
+  return True
+
 def menu():
   while True:
     print("\nLet the learning being\n")
@@ -97,11 +145,12 @@ def menu():
     print("2. Density Profile")
     print("3. Virial Radius and Virial Mass")
     print("4. Velocity Dispersion")
-    print("5. Exit")
+    print("5. Extra Dimension Potential")
+    print("6. Exit")
     try:
-      choice = int(input("Enter a number (1-5): "))
+      choice = int(input("Enter a number (1-6): "))
     except ValueError:
-      print("Invalid input. Please enter a number between 1 and 5.")
+      print("Invalid input. Please enter a number between 1 and 6.")
       continue
     
     if choice == 1:
@@ -119,6 +168,10 @@ def menu():
       if sigma_v is not None:
         print("Velocity dispersion computed successfully.")
     elif choice == 5:
+      result = extra_dimension_potential()
+      if result is not None:
+        print("Extra dimension simulation completed successfully.")
+    elif choice == 6:
       print("Exiting program. Goodbye!")
       break
     else:
