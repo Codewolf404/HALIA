@@ -77,7 +77,7 @@ def menu():
   
 def velocity_dispersion():
   print("\nVelocity dispersion tells us how fast particles are moving randomly inside the dark matter halo. It’s a measure of the spread in their velocities, some particles move slower, others faster, depending on how strong gravity is in that region.\n")
-    G = 4.302e-6  # Gravitational constant in (kpc * km^2) / (Msun * s^2)
+  G = 4.302e-6  # Gravitational constant in (kpc * km^2) / (Msun * s^2)
     
     try:
         M_vir = float(input("Enter the Virial Mass (in solar masses): "))
