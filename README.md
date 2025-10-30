@@ -1,11 +1,13 @@
-HALIA (Halo Analysis Interactive Application)
+# HALIA (Halo Analysis Interactive Application)
 
 HALIA is an interactive simulation tool designed to explore the properties and dynamics of dark matter halos.
 It allows users to calculate key halo parameters such as density, virial radius, and velocity dispersion, and even study how these quantities change under theories like string theory and extra dimensions.
 
 The program combines classical gravitational models with theoretical extensions to give a broader view of how dark matter halos might behave in different conditions.
 
-Features
+---
+
+#Features
 
 Calculates halo properties such as density, virial radius, and velocity dispersion.
 
