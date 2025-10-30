@@ -7,7 +7,7 @@ The program combines classical gravitational models with theoretical extensions 
 
 ---
 
-# Features
+## Features
 
 Calculates halo properties such as density, virial radius, and velocity dispersion.
 
@@ -20,8 +20,9 @@ Displays numerical results with physical explanations of increases or decreases.
 Helps visualize how dark matter halos might differ in alternative cosmological models.
 
 ---
-# Usage
-```bash
+## Usage
+1. Clone the repository:
+   ```bash
    git clone https://github.com/Codewolf404/HALIA.git
 
 ---
