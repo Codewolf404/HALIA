@@ -23,6 +23,7 @@ Helps visualize how dark matter halos might differ in alternative cosmological m
 # Usage
 ```bash
    git clone https://github.com/Codewolf404/HALIA.git
+
 ---
 # Example Output 
 Welcome to HALIA (Halo Analysis Interactive Application)
