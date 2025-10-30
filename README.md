@@ -7,7 +7,7 @@ The program combines classical gravitational models with theoretical extensions 
 
 ---
 
-#Features
+# Features
 
 Calculates halo properties such as density, virial radius, and velocity dispersion.
 
