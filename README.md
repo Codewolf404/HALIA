@@ -26,7 +26,7 @@ Helps visualize how dark matter halos might differ in alternative cosmological m
    git clone https://github.com/Codewolf404/HALIA.git
 
 ---
-# Example Output 
+## Example Output 
 Welcome to HALIA (Halo Analysis Interactive Application)
 
 Choose an operation:
@@ -105,7 +105,7 @@ Velocity Dispersion: Standard = 200.00 km/s, Extra Dimension = 202.00 km/s
 
 ---
 
-# License
+## License
 
 Copyright (c) 2025 Atufa Vora
 Permission is granted to use, modify, and distribute this software with prior permission from the author.
