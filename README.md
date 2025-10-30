@@ -96,6 +96,7 @@ Density: Standard = 0.006, Extra Dimension = 0.006
 Virial Mass: Standard = 2000.00, Extra Dimension = 2050.00
 Virial Radius: Standard = 0.85, Extra Dimension = 0.83
 Velocity Dispersion: Standard = 200.00 km/s, Extra Dimension = 202.00 km/s
+
 ---
 
 # License
