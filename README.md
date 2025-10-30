@@ -20,6 +20,10 @@ Displays numerical results with physical explanations of increases or decreases.
 Helps visualize how dark matter halos might differ in alternative cosmological models.
 
 ---
+# Usage
+git clone https://github.com/yourusername/HALIA.git
+cd HALIA
+---
 # Example Output 
 Welcome to HALIA (Halo Analysis Interactive Application)
 
